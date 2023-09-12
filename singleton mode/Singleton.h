@@ -38,7 +38,7 @@ Singleton* Singleton::getInstance()
 }
 
 
-// 双检查锁，但由于内存读写reorder不安全
+// 双检查锁，但由于内存读写reorder不安全(CPU指令序列的优化)
 Singleton* Singleton::getInstance()
 {
     if(m_instance == nullptr)
